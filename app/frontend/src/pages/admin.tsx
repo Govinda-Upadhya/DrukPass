@@ -51,8 +51,6 @@ export default function Admin() {
         })
         .rpc();
 
-     
-
       await fetchLocations();
       setShowModal(false);
     } catch (err) {
