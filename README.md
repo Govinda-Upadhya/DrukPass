@@ -97,12 +97,6 @@ Deploy to your validator or Devnet:
 anchor deploy
 ```
 
-Run tests:
-
-```bash
-anchor test
-```
-
 ---
 
 # 📱 How It Works
@@ -123,7 +117,6 @@ DrukPass/
 │
 ├── app/                 # React frontend
 ├── programs/            # Anchor program
-├── tests/               # Anchor tests
 ├── migrations/
 ├── Anchor.toml
 └── Cargo.toml
