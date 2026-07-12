@@ -4,7 +4,7 @@ import { useWallet } from '@solana/wallet-adapter-react';
 import { WalletMultiButton } from '@solana/wallet-adapter-react-ui';
 import { PublicKey } from '@solana/web3.js';
 import { Html5QrcodeScanner } from 'html5-qrcode';
-
+import { Buffer } from 'buffer';
 import { useProgram } from '../hook/useProgram';
 import RegisterModal from '../components/registermodal';
 import TravelerProfile from '../components/travelerprofile';
@@ -21,12 +21,6 @@ interface Traveler {
   country: string;
   numberOfPlacesVisited: number;
   createdAt: number;
-}
-
-interface Location {
-  slug: string;
-  name: string;
-  district: string;
 }
 
 export default function Home() {

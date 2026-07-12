@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 import { PublicKey } from '@solana/web3.js';
-
+import { Buffer } from 'buffer';
 import { useProgram } from '../hook/useProgram';
 import CreateLocationForm from '../components/createlocation';
 
@@ -9,7 +9,7 @@ interface Location {
   name: string;
   district: string;
 }
-
+('node');
 export default function Admin() {
   const { program } = useProgram();
 
