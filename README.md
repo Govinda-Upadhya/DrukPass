@@ -60,18 +60,8 @@ bun install
 
 ---
 
-## 3. Configure environment variables
 
-Create a `.env` file inside the `app` directory.
-
-```env
-VITE_RPC_URL=<YOUR_RPC_URL>
-VITE_PROGRAM_ID=<YOUR_PROGRAM_ID>
-```
-
----
-
-## 4. Start the frontend
+## 3. Start the frontend
 
 ```bash
 npm run dev
