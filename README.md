@@ -108,6 +108,54 @@ anchor deploy
 5. Receive a permanent on-chain travel stamp.
 6. View all collected stamps in your digital passport.
 
+## 🛠️ Admin Configuration
+
+By default, the program contains a hardcoded administrator wallet that is authorized to register new locations.
+
+If you are deploying your own instance of DrukPass, replace the `ADMIN` constant in the Anchor program with your own wallet's public key:
+
+```rust
+pub const ADMIN: Pubkey = pubkey!("YOUR_PUBLIC_KEY");
+```
+
+After updating the admin wallet, rebuild and redeploy the program:
+
+```bash
+anchor build
+anchor deploy
+```
+
+You should also update the Program ID used by the frontend if you deploy a new instance of the smart contract.
+
+---
+
+## 📍 Registering Locations
+
+Once you are the admin, navigate to:
+
+```
+/admin
+```
+
+From there you can register a new tourist location by providing:
+
+- Slug
+- Location name
+- District
+
+For each registered location, create a QR code that points to:
+
+```
+https://drukpass.app/claim?slug=<location-slug>
+```
+
+Example:
+
+```
+https://drukpass.app/claim?slug=tiger-nest
+```
+
+You can generate the QR code using any online QR code generator and place it at the tourist destination.
 ---
 
 # 📂 Project Structure
