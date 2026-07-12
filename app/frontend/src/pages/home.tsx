@@ -1,4 +1,3 @@
-import React from 'react';
 import '../App.css';
 import { useEffect, useState } from 'react';
 import { useWallet } from '@solana/wallet-adapter-react';
@@ -43,9 +42,6 @@ export default function Home() {
   const [showRegisterModal, setShowRegisterModal] = useState(false);
   const [loading, setLoading] = useState(false);
 
-  const [locations, setLocations] = useState<Location[]>([]);
-  const [claimingSlug, setClaimingSlug] = useState<string | null>(null);
-
   async function fetchMyStamps() {
     if (!publicKey) return;
 
@@ -85,8 +81,6 @@ export default function Home() {
   async function claimStamp(slug: string) {
     if (!publicKey) return;
 
-    setClaimingSlug(slug);
-
     try {
       const [travelerPda] = PublicKey.findProgramAddressSync(
         [Buffer.from('traveler-profile'), publicKey.toBuffer()],
@@ -117,8 +111,6 @@ export default function Home() {
       await fetchMyStamps();
     } catch (err) {
       console.error(err);
-    } finally {
-      setClaimingSlug(null);
     }
   }
 

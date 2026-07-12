@@ -51,7 +51,7 @@ export default function Admin() {
         })
         .rpc();
 
-      const account = await program.account.location.fetch(locationPda);
+     
 
       await fetchLocations();
       setShowModal(false);
