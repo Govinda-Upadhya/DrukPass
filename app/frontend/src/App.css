@@ -1,0 +1,20 @@
+#reader button {
+  background: #2563eb !important;
+  color: white !important;
+  border: none !important;
+  border-radius: 8px !important;
+  padding: 10px 16px !important;
+  cursor: pointer;
+}
+
+#reader select {
+  background: #18181b !important;
+  color: white !important;
+  border: 1px solid #3f3f46 !important;
+  border-radius: 8px;
+  padding: 8px;
+}
+
+#reader {
+  color: white;
+}

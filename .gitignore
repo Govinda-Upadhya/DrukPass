@@ -1,0 +1,26 @@
+.anchor
+.DS_Store
+
+target
+node_modules
+.yarn
+.surfpool
+test-ledger
+
+**/*.rs.bk
+
+# Environment files
+.env
+.env.*
+
+# Solana wallet (if kept inside project)
+wallet.json
+id.json
+*.keypair.json
+
+# Logs
+*.log
+
+# Editor
+.vscode/
+.idea/
